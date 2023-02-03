@@ -3,51 +3,8 @@ use std::io::Result as IoResult;
 
 use std::collections::{BinaryHeap, HashMap};
 
-mod front_of_house {
-    pub mod hosting {
-
-        fn seat_at_table() {}
-
-        pub fn add_to_wait_list() {}
-    }
-
-    pub mod serving {
-
-        fn serve_order() {}
-
-        pub fn take_order() {}
-
-        fn take_payment() {}
-    }
-}
-
-mod back_of_house {
-    pub enum Appetizer {
-        Soup,
-        Salad,
-    }
-
-    pub struct Breakfast {
-        pub toast: String,
-        seasonal_fruit: String,
-    }
-
-    impl Breakfast {
-        pub fn summer(toast: &str) -> Breakfast {
-            Breakfast {
-                toast: String::from(toast),
-                seasonal_fruit: String::from("peaches"),
-            }
-        }
-    }
-
-    fn cook_order() {}
-
-    fn fix_incorrect_order() {
-        cook_order();
-        super::deliver_order();
-    }
-}
+mod back_of_house;
+mod front_of_house;
 
 fn deliver_order() {}
 
