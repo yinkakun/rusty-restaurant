@@ -1,14 +1,17 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+mod front_of_house {
+    mod hosting {
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+        fn seat_at_table() {}
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+        fn add_to_wait_list() {}
+    }
+
+    mod serving {
+
+        fn serve_order() {}
+
+        fn take_order() {}
+
+        fn take_payment() {}
     }
 }
