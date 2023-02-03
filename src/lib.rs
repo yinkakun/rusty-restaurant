@@ -1,17 +1,25 @@
 mod front_of_house {
-    mod hosting {
+    pub mod hosting {
 
         fn seat_at_table() {}
 
-        fn add_to_wait_list() {}
+        pub fn add_to_wait_list() {}
     }
 
-    mod serving {
+    pub mod serving {
 
         fn serve_order() {}
 
-        fn take_order() {}
+        pub fn take_order() {}
 
         fn take_payment() {}
     }
+}
+
+fn eat_at_restaurant() {
+    // absolute path
+    crate::front_of_house::hosting::add_to_wait_list();
+
+    // relative path
+    front_of_house::serving::take_order();
 }
